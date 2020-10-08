@@ -14,4 +14,4 @@ The project is finished. Although, it could be modified to make it closer in ter
 
 # Screenshots
 
-![Alt text](https://user-images.githubusercontent.com/56621823/89696581-699ccb00-d8cd-11ea-9240-cba13b941a53.png)
+![Alt text](https://user-images.githubusercontent.com/56621823/95425313-ee6d8a80-08f8-11eb-819d-61b3c5bea938.png)
