@@ -52,7 +52,7 @@ function drawLaser(laser, totoro) {
 function eraseTotoro(totoro) {
   fill("lightBlue");
   stroke("lightBlue");
-  
+
   //totoro's body
   ellipse(totoro.x, totoro.y, totoro.w, totoro.h);
   //orejitas
@@ -76,7 +76,7 @@ function eraseTotoro(totoro) {
   rect(totoro.x - 15, totoro.y + 15, totoro.w - 68, totoro.h - 88);
   //nose
   rect(totoro.x - 3, totoro.y - 16, totoro.w - 75, totoro.h - 85);
-  
+
 };
 
 //create function for updating totoro
@@ -96,7 +96,7 @@ function updateTotoro(totoro) {
 function drawTotoro(totoro) {
   fill(totoro.color);
   noStroke();
-  
+
   //totoro's body
   ellipse(totoro.x, totoro.y, totoro.w, totoro.h);
   //orejitas
@@ -126,10 +126,10 @@ function drawTotoro(totoro) {
 function eraseSusu(susuwatari) {
   fill("lightBlue");
   stroke("lightBlue");
-  
+
   //body of the susuwatari
   ellipse(susuwatari.x, susuwatari.y, susuwatari.d + 10);
-  
+
   //eyes
   fill("white");
   ellipse(susuwatari.x - 10, susuwatari.y, susuwatari.d - 35)
@@ -156,7 +156,7 @@ function updateSusu(susuwatari) {
 function drawSusu(susuwatari) {
   fill(susuwatari.color);
   noStroke();
-  
+
   //body of the susuwatari
   ellipse(susuwatari.x, susuwatari.y, susuwatari.d);
   //eyes
@@ -191,40 +191,40 @@ function setupAllSusu() {
 function setup() {
   // === *** Leave the next line alone. *** ====
   createCanvas(WIDTH, HEIGHT).parent('container');
-  
+
   // === Commands to run ONCE when the page loads ===
   background('lightBlue');
-  
+
   setupAllSusu();
-  
+
 };
 
 function draw() {
   // === Commands to run REPEATEDLY ====
-  
+
    //laser drawing
   if (myLaser.active === true) {
     eraseLaser(myLaser);
     updateLaser(myLaser);
     drawLaser(myLaser);
   };
-  
+
   //for loop for updating and erasing susuwataris
   for (let i = 0; i < groupOfSusus.length; i++) {
     eraseSusu(groupOfSusus[i]);
     updateSusu(groupOfSusus[i]);
   };
-  
+
   //for loop for drawing suzuwataris
   for (let i = 0; i < groupOfSusus.length; i++) {
     drawSusu(groupOfSusus[i]);
   };
-  
+
   //totoro drawing
   eraseTotoro(myTotoro);
   updateTotoro(myTotoro);
   drawTotoro(myTotoro);
- 
+
 };
 
 function keyPressed() {
@@ -234,7 +234,7 @@ function keyPressed() {
   } else if (keyCode === RIGHT_ARROW) {
     myTotoro.vx = 2;
   };
-  
+
   //logic for spacebar
   if (keyCode === 32) {
     //if spacebar is hit and the laser is not active
@@ -244,8 +244,8 @@ function keyPressed() {
       myLaser.active = true;
       myLaser.vy = -5;
     };
-  };        
-  
+  };
+
 };
 // === *** Leave the code below here alone. *** ===
 
